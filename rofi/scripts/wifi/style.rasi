@@ -1,0 +1,12 @@
+@theme "~/.config/rofi/style.rasi"
+
+// Window
+window {
+  width:                       500px;
+  height:                      500px;
+}
+
+inputbar {
+  visible: false;
+  enabled: false;
+}

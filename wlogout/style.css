@@ -1,0 +1,72 @@
+@import url("colors.css");
+
+* {
+    background-image: none;
+    font-family: sans-serif;
+}
+
+window {
+    background-color: rgba(12, 12, 12, 0.7);
+    background-image: none;
+}
+
+button {
+    background-color: @background;
+    border-style: none;
+    border-radius: 12px;
+    margin: 5px;
+    padding: 10px;
+    min-width: 100px;
+    min-height: 100px;
+    color: #FFFFFF;
+    transition: all 0.3s ease;
+}
+
+/* Individual button styling */
+#lock {
+    background-image: url('./icons/lock.svg');
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#logout {
+    background-image: url('./icons/logout.svg');
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#suspend {
+    background-image: url('./icons/suspend.svg');
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#hibernate {
+    background-image: url('./icons/hibernate.svg');
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#reboot {
+    background-image: url('./icons/reboot.svg');
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#shutdown {
+    background-image: url('./icons/shutdown.svg');
+    background-size: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Hover effects */
+button:hover {
+    background-color: @color3;
+    outline-style: none;
+} 

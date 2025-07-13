@@ -1,0 +1,146 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = true
+
+
+format = """
+[](red)\
+$os\
+$username\
+[](bg:yellow fg:red)\
+$directory\
+[](bg:red fg:yellow)\
+$git_branch\
+$git_status\
+[](fg:red bg:white)\
+$c\
+$rust\
+$golang\
+$nodejs\
+$php\
+$java\
+$kotlin\
+$python\
+[](fg:white bg:red)\
+$docker_context\
+$conda\
+[](fg:red bg:white)\
+$time\
+[ ](fg:white)\
+$cmd_duration\
+$line_break\
+$character"""
+
+[os]
+disabled = false
+style = "bg:red fg:black"
+
+
+[os.symbols]
+Arch = "󰣇"
+
+[username]
+show_always = true
+style_user = "bg:red fg:black"
+format = '[ $user]($style)'
+
+[directory]
+style = "bg:yellow fg:black"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = "󰝚 "
+"Pictures" = " "
+"Codespaces" = "󰲋 "
+
+[git_branch]
+symbol = ""
+style = "bg:red"
+format = '[[ $symbol $branch ](fg:black bg:red)]($style)'
+
+[git_status]
+style = "bg:red"
+format = '[[($all_status$ahead_behind )](fg:black bg:red)]($style)'
+
+
+[nodejs]
+symbol = ""
+style = "bg:white"
+format = '[[$symbol( $version) ](fg:black bg:white)]($style)' 
+
+[c]
+symbol = " "
+style = "bg:white"
+format = '[[ $symbol( $version) ](fg:black bg:white)]($style)'
+
+[rust]
+symbol = ""
+style = "bg:white"
+format = '[[ $symbol( $version) ](fg:black bg:white)]($style)'
+
+[golang]
+symbol = ""
+style = "bg:white"
+format = '[[ $symbol( $version) ](fg:black bg:white)]($style)'
+
+[php]
+symbol = ""
+style = "bg:white"
+format = '[[ $symbol( $version) ](fg:black bg:white)]($style)'
+
+[java]
+symbol = " "
+style = "bg:white"
+format = '[[ $symbol( $version) ](fg:black bg:white)]($style)'
+
+[kotlin]
+symbol = ""
+style = "bg:white"
+format = '[[ $symbol( $version) ](fg:black bg:white)]($style)'
+
+[python]
+symbol = ""
+style = "bg:white"
+format = '[[ $symbol( $version)(\(#$virtualenv\)) ](fg:black bg:white)]($style)'
+
+[docker_context]
+symbol = ""
+style = "bg:red"
+format = '[[ $symbol( $context) ](fg:black bg:red)]($style)'
+
+[conda]
+symbol = "  "
+style = "fg:black bg:red"
+format = '[$symbol$environment ]($style)'
+ignore_base = false
+
+
+[time]
+disabled = false
+time_format = "%R"
+style = "bg:white"
+format = '[[  $time ](fg:black bg:white)]($style)'
+
+[line_break]
+disabled = true
+
+[character]
+disabled = false
+success_symbol = '[❯](bold fg:green)'
+error_symbol = '[❯](bold fg:red)'
+vimcmd_symbol = '[❮](bold fg:green)'
+vimcmd_replace_one_symbol = '[❮](bold fg:lavender)'
+vimcmd_replace_symbol = '[❮](bold fg:lavender)'
+vimcmd_visual_symbol = '[❮](bold fg:yellow)'
+
+[cmd_duration]
+show_milliseconds = true
+format = " in $duration "
+style = "bg:lavender"
+disabled = false
+show_notifications = true
+min_time_to_notify = 45000

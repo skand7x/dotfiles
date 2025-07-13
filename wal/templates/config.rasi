@@ -1,0 +1,198 @@
+/*Modern Dracula theme with futuristic elements and semi-transparent background*/
+
+configuration {{
+    show-icons: true;
+    display-drun:    "";
+    disable-history: false;
+    font: "JetBrains Mono Nerd Font 12";
+    sort: true;
+    sorting-method: "fzf";
+    drun {{
+        parse-user: true;
+        parse-system: true;
+        sort: true;
+        sorting-method: "mru";
+    }}
+}}
+
+* {{
+
+
+    font: "JetBrains Mono Nerd Font 12";
+
+    foreground: {foreground};
+    background: transparent;
+    background-solid: {background};
+    active-background: {color3};
+
+    
+    selected-background: @active-background;
+    selected-active-background: @active-background;
+    separatorcolor: @active-background;
+    bordercolor: {color1};
+}}
+
+#window {{
+    background-color: @background;
+    border:           3px;
+    border-radius:    12px;
+    border-color:     @bordercolor;
+    padding:          20px;
+    spacing:          0px;
+    width:            45%;
+    height:           50%;
+    transparency:     "real";
+    location:         center;
+    anchor:           center;
+    fullscreen:       false;
+}}
+
+
+
+#mainbox {{
+    border:           0px;
+    border-radius:    0px;
+    padding:          10px;
+    background-color: transparent;
+}}
+
+#message {{
+    border:       0px;
+    border-color: @separatorcolor;
+    padding:      5px;
+}}
+
+#textbox {{
+    text-color: @foreground;
+    background-color: transparent;
+}}
+
+
+
+#listview {{
+    fixed-height: false;
+    dynamic:      true;
+    border:       0px;
+    border-radius: 10px;
+    border-color: @bordercolor;
+    spacing:      5px;
+    scrollbar:    false;
+    padding:      10px 5px 0px 5px;
+    margin:       0px 0px 5px 0px;
+    background-color: transparent;
+}}
+
+#element {{
+    border:        0px;
+    border-radius: 8px;
+    padding:       8px;
+}}
+
+#element.normal.normal {{
+    background-color: transparent;
+    text-color:       @foreground;
+}}
+
+#element.normal.urgent {{
+    background-color: inherit;
+    text-color:       @foreground;
+}}
+
+#element.normal.active {{
+    background-color: @active-background;
+    text-color:       @background-solid;
+}}
+
+#element.selected.normal {{
+    background-color: @selected-background;
+    text-color:       {background};
+}}
+
+#element.selected.urgent {{
+    background-color: inherit;
+    text-color:       @foreground;
+}}
+
+#element.selected.active {{
+    background-color: @selected-active-background;
+    text-color:       @background-solid;
+}}
+
+#element.alternate.normal {{
+    background-color: transparent;
+    text-color:       @foreground;
+}}
+
+#element.alternate.urgent {{
+    background-color: inherit;
+    text-color:       @foreground;
+}}
+
+#element.alternate.active {{
+    background-color: @active-background;
+    text-color:       @foreground;
+}}
+
+#scrollbar {{
+    width:        2px;
+    border:       0px;
+    handle-color: {color3};
+    handle-width: 8px;
+    padding:      0;
+}}
+
+#sidebar {{
+    border:       2px dash 0px 0px;
+    border-color: @separatorcolor;
+}}
+
+#button.selected {{
+    background-color: @selected-background;
+    text-color:       @foreground;
+}}
+
+#inputbar {{
+    spacing:    0px;
+    text-color: @foreground;
+    padding:    10px;
+    margin:     5px 0px;
+    border:     3px;
+    border-radius: 8px;
+    border-color: {background};
+    background-color: transparent;
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+}}
+
+#case-indicator {{
+    spacing:    0;
+    text-color: {color3};
+}}
+
+#entry {{
+    spacing:    0;
+    text-color: {color3};
+    padding:    0px 10px;
+}}
+
+#prompt {{
+    spacing:    0;
+    text-color: {foreground};
+}}
+
+#textbox-prompt-colon {{
+    expand:     false;
+    str:        "❯";
+    margin:     0px 0.3em 0em 0em;
+    text-color: {color3};
+}}
+
+element-text, element-icon {{
+    background-color: inherit;
+    text-color: inherit;
+    vertical-align: 0.5;
+}}
+
+element-icon {{
+    size: 30px;
+    margin: 0px 10px 0px 0px;
+}}
